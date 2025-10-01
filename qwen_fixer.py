@@ -6,6 +6,8 @@ from typing import List, Dict
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from prompt import get_chat_messages
+
+
 def _extract_function(text: str) -> str:
     """
     Clean Qwen output:
@@ -155,4 +157,5 @@ class QwenFixer:
         out = self.tokenizer.decode(gen[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
         cleaned = _extract_function(out)
         enriched = _ensure_support_imports(cleaned)
+
         return _strip_asserts(enriched)
