@@ -12,17 +12,16 @@ LLM-powered repair agent for the [HumanEvalPack](https://huggingface.co/datasets
 
 ## Project Layout
 
-agent.py # Minimal orchestration primitives (tasks, results, agent class)
-eval_pass1_val.py # Dev-sized evaluation over the first 20 HumanEvalPack samples
-eval_pass1_test.py # Extended evaluation across the full test split
-graph_agent.py # LangGraph state machine wiring fixer → sandbox runner
-prompt.py # Strict system/user prompts to keep generations compliant
-qwen_fixer.py # Qwen model wrapper and output post-processing helpers
-sandbox.py # Hardened execution harness using ProcessPoolExecutor
-requirements.txt # Python package dependencies
-results_val.json # Example evaluation output (dev slice)
-results_final.json # Example evaluation output (full sweep)
-
+- `agent.py` – Minimal orchestration primitives (tasks, results, agent class)
+- `eval_pass1_val.py` – Dev-sized evaluation over the first 20 HumanEvalPack samples
+- `eval_pass1_test.py` – Extended evaluation across the full test split
+- `graph_agent.py` – LangGraph state machine wiring fixer → sandbox runner
+- `prompt.py` – Strict system/user prompts to keep generations compliant
+- `qwen_fixer.py` – Qwen model wrapper and output post-processing helpers
+- `sandbox.py` – Hardened execution harness using ProcessPoolExecutor
+- `requirements.txt` – Python package dependencies
+- `results_val.json` – Example evaluation output (dev slice)
+- `results_final.json` – Example evaluation output (full sweep)
 
 ## Getting Started
 
@@ -43,6 +42,7 @@ source .venv/bin/activate
 
 pip install --upgrade pip
 pip install -r requirements.txt
+
 Tip: Run huggingface-cli login ahead of time if the dataset/model require authentication.
 
 Configuration
@@ -80,4 +80,5 @@ Hugging Face download failures: Ensure huggingface_hub is logged in and network 
 Import blocked errors: The sandbox rejects imports from os, sys, subprocess, etc. Modify _BLOCKED_IMPORTS in sandbox.py only if you fully trust the generated code.
 License
 Add the appropriate license information here (e.g., MIT, Apache 2.0). If you borrowed code from other projects, ensure their licenses are compatible and acknowledged.
+
 
