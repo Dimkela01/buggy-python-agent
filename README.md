@@ -71,13 +71,12 @@ Full Test Sweep
 python eval_pass1_test.py
 ```
 
-Iterates over remaining tasks (start=20 onward)
-
-Saves cumulative results to results_final.json
+- Iterates over remaining tasks (start=20 onward)
+- Saves cumulative results to results_final.json
 
 Resource note: The full sweep is CPU-heavy. Consider running in smaller chunks or on a machine with sufficient RAM/CPU.
 
-### Inspecting Results
+## Inspecting Results
 
 Each entry in the results JSON files includes:
 
@@ -116,6 +115,7 @@ Import blocked errors: The sandbox rejects imports from os, sys, subprocess, etc
 ## License
 
 Add your license here (e.g., MIT, Apache 2.0). Ensure any code borrowed from other projects is compliant with their licenses.
+
 
 
 
