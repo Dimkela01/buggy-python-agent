@@ -81,4 +81,3 @@ Import blocked errors: The sandbox rejects imports from os, sys, subprocess, etc
 License
 Add the appropriate license information here (e.g., MIT, Apache 2.0). If you borrowed code from other projects, ensure their licenses are compatible and acknowledged.
 
-Natural next step: create `README.md` in the repo root, paste this content, and adjust the license section to match your project.
