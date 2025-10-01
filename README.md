@@ -51,7 +51,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Tip: Run huggingface-cli login if the dataset or model requires authentication.
+`Tip:` Run huggingface-cli login if the dataset or model requires authentication.
 
 ---
 
@@ -72,7 +72,7 @@ python eval_pass1_val.py
 - Prints per-task pass/fail
 - Writes detailed records to results_val.json
 
-Full Test Sweep
+`Full Test Sweep`
 ```
 python eval_pass1_test.py
 ```
@@ -97,39 +97,33 @@ Each entry in the results JSON files includes:
 }
 ```
 
-passed indicates whether the model successfully fixed the code.
-
-candidate_code is the model-generated solution.
-
-error contains any exception or timeout info.
-
-Aggregate statistics like pass@1 and number of evaluated tasks are printed to stdout at the end of each run.
+- `passed` indicates whether the model successfully fixed the code.
+- `candidate_code` is the model-generated solution.
+- `error contains` any exception or timeout info.
+- `Aggregate statistics` like pass@1 and number of evaluated tasks are printed to stdout at the end of each run.
 
 ---
 
 ### Customization
 
-Swap in a different fixer by modifying QwenFixer in eval_pass1_val.py or eval_pass1_test.py.
-
-Tweak prompt behavior in prompt.py, or add few-shot examples via the include_few_shot flag.
-
-Adjust sandbox timeout via the timeout_sec parameter in sandbox.evaluate_candidate.
+- Swap in a different fixer by modifying QwenFixer in eval_pass1_val.py or eval_pass1_test.py.
+- Tweak prompt behavior in prompt.py, or add few-shot examples via the include_few_shot flag.
+- Adjust sandbox timeout via the timeout_sec parameter in sandbox.evaluate_candidate.
 
 ---
 
 ### Troubleshooting
 
-Session resets / crashes: Reduce the number of samples per run, or switch to a smaller/quantized model. Using GPU or server-class CPU is recommended.
-
-Hugging Face download failures: Ensure you are logged in (huggingface-cli login) and have network access.
-
-Import blocked errors: The sandbox rejects imports from os, sys, subprocess, etc. Only modify _BLOCKED_IMPORTS in sandbox.py if you fully trust the generated code.
+- Session resets / crashes: Reduce the number of samples per run, or switch to a smaller/quantized model. Using GPU or server-class CPU is recommended.
+- Hugging Face download failures: Ensure you are logged in (huggingface-cli login) and have network access.
+- Import blocked errors: The sandbox rejects imports from os, sys, subprocess, etc. Only modify _BLOCKED_IMPORTS in sandbox.py if you fully trust the generated code.
 
 ---
 
 ## License
 
 Add your license here (e.g., MIT, Apache 2.0). Ensure any code borrowed from other projects is compliant with their licenses.
+
 
 
 
