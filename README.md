@@ -47,6 +47,7 @@ source .venv/bin/activate
 
 pip install --upgrade pip
 pip install -r requirements.txt
+```
 
 Tip: Run huggingface-cli login if the dataset or model requires authentication.
 
@@ -54,3 +55,4 @@ Configuration
 
 By default, scripts run on CPU. Expect ~2 GB RAM usage for the Qwen 0.5B model plus extra headroom for the sandbox worker.
 Optionally, set HF_HOME or TRANSFORMERS_CACHE to control cache location for models/datasets.
+
