@@ -11,6 +11,7 @@ def main():
     test_split = ds["test"]
     n_total = len(test_split)
     start = 20  # first 20 samples
+    end = 140  # limited capacity on CPU use n_total with enogh RAM and CPU
     assert start < n_total
 
     fixer = QwenFixer("Qwen/Qwen2.5-0.5B-Instruct") #small model
@@ -25,7 +26,7 @@ def main():
     results = []
 
     #test loop
-    for idx, ex in enumerate(test_split.select(range(start, n_total)), start=start):
+    for idx, ex in enumerate(test_split.select(range(start, end)), start=start):
         task_id = ex["task_id"]
         spec = ex.get("prompt") or ex.get("declaration", "")
         buggy_code = ex["buggy_solution"]
