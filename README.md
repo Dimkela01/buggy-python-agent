@@ -108,7 +108,9 @@ Each entry in the results JSON files includes:
 
 - Mini validation slice (20 problems): 8 / 20 solved, saved with the same JSON schema
 - **HumanEvalFix** tasks #20–#140: 32 / 120 solved → pass@1 = 0.267 (see results_final.json; rerunning python eval_pass1_test.py prints the same summary)
-- Note: This subset is still demanding—many prompts require multi-stage reasoning—and our lightweight model, even with intensive prompt instruction, lacks the capacity to close the gap, so stronger models or more capable tool-aided workflows would likely score higher
+- **Note:** This subset is still demanding—many prompts require multi-stage reasoning—and our lightweight model, even with intensive prompt instruction, lacks the capacity to close the gap, so stronger models or more capable tool-aided workflows would likely score higher
+
+---
 
 ### Customization
 
@@ -129,6 +131,7 @@ Each entry in the results JSON files includes:
 ## License
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
 
 
 
