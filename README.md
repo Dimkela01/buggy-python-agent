@@ -104,6 +104,10 @@ Each entry in the results JSON files includes:
 
 ---
 
+## Final Results
+
+Evaluating HumanEvalFix tasks #20–#139 (120 examples), the agent solved 32 of 120 cases (pass@1 = 0.267); the full run is logged in results_final.json, and the script prints the same summary when rerun. On a 20-problem mini validation slice we reached 8/20, also stored in the same format. This benchmark remains tough—many prompts demand nuanced reasoning and multi-step edits—and our lightweight model, even with heavy instruction tuning in the prompt, lacks the capacity to close that gap, so richer models or stronger tool-aided workflows should net higher scores
+
 ### Customization
 
 - Swap in a different fixer by modifying QwenFixer in eval_pass1_val.py or eval_pass1_test.py.
@@ -123,6 +127,7 @@ Each entry in the results JSON files includes:
 ## License
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
 
 
 
