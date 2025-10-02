@@ -122,7 +122,8 @@ Each entry in the results JSON files includes:
 
 ## License
 
-Add your license here (e.g., MIT, Apache 2.0). Ensure any code borrowed from other projects is compliant with their licenses.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
 
 
 
