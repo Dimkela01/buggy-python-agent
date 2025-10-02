@@ -112,7 +112,7 @@ Each entry in the results JSON files includes:
 
 ---
 
-### Customization
+## Customization
 
 - Swap in a different fixer by modifying QwenFixer in eval_pass1_val.py or eval_pass1_test.py.
 - Tweak prompt behavior in prompt.py, or add few-shot examples via the include_few_shot flag.
@@ -120,7 +120,7 @@ Each entry in the results JSON files includes:
 
 ---
 
-### Troubleshooting
+## Troubleshooting
 
 - Session resets / crashes: Reduce the number of samples per run, or switch to a smaller/quantized model. Using GPU or server-class CPU is recommended.
 - Hugging Face download failures: Ensure you are logged in (huggingface-cli login) and have network access.
@@ -131,6 +131,7 @@ Each entry in the results JSON files includes:
 ## License
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
 
 
 
